@@ -46,27 +46,39 @@ nav {
   background-color: var(--nav-green);
   position: sticky;
   top: 0;
-  align-items: center;
   z-index: 20;
 }
 
 .navbar {
-  max-width: 1180px;
+  width: min(100%, 640px);
   margin: 0 auto;
-  min-height: 58px;
-  padding: 0.3rem clamp(1rem, 8vw, 10rem);
+  height: 56px;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1.5rem, 4vw, 4.5rem);
+  gap: 2.25rem;
+}
+
+.navbar > a {
+  width: 45px;
+  height: 45px;
+  flex: 0 0 45px;
+}
+
+.navbar > a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .navbar__links {
   display: flex;
   align-items: center;
-  gap: clamp(1.75rem, 5vw, 7rem);
-  flex-wrap: wrap;
+  gap: 2rem;
+  flex-wrap: nowrap;
   justify-content: center;
+  white-space: nowrap;
 }
 
 
@@ -85,18 +97,19 @@ nav {
 .home {
   min-height: 100vh;
   background: var(--bg-dark);
+  overflow-x: hidden;
 }
 
 .restaurant-panel {
   position: relative;
   background: var(--bg-dark);
-  padding-bottom: 5.25rem;
+  padding-bottom: 4.7rem;
 }
 
 .restaurant {
   position: relative;
   width: 100%;
-  height: clamp(12.5rem, 32vw, 19rem);
+  height: clamp(12.5rem, 20vw, 13.25rem);
   overflow: hidden;
   background: #2d2a22;
 }
@@ -110,7 +123,7 @@ nav {
   position: relative;
   z-index: 5;
   width: min(35.9rem, calc(100% - 2.25rem));
-  margin: -2.45rem auto 0;
+  margin: -2.42rem auto 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.05rem, 2.2vw, 1.5rem);
@@ -126,12 +139,13 @@ nav {
   background: var(--accent);
   color: #fff6e8;
   box-shadow: 0 0.5rem 1.1rem rgba(58, 25, 9, 0.16);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
 }
 
 .restaurant-panel__card:hover,
 .restaurant-panel__card:focus-visible {
   transform: translateY(-0.15rem);
+  color: #E8AF68;
   box-shadow: 0 0.75rem 1.35rem rgba(58, 25, 9, 0.22);
   outline: none;
 }
@@ -164,26 +178,60 @@ nav {
   place-items: center;
   padding: 0.5rem 0.85rem;
   text-align: center;
-  color: #fff7e8;
   font-size: clamp(0.95rem, 1.35vw, 1.08rem);
   line-height: 1.25;
   text-wrap: balance;
 }
 
+.restaurant-panel__copy {
+  width: min(35.9rem, calc(100% - 2.25rem));
+  margin: 0.72rem auto 0;
+  color: var(--nav-green);
+}
+
+.restaurant-panel__copy h1 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(3rem, 2.1vw, 1.45rem);
+  line-height: 1.05;
+  font-weight: 400;
+  color: #4d2f16
+}
+
+.restaurant-panel__copy h1::after {
+  content: "";
+  display: inline-block;
+  width: 0.85rem;
+  height: 1.2rem;
+  margin-left: 0.35rem;
+  background: url("/AboutIcon.svg") center / contain no-repeat;
+  vertical-align: -0.15rem;
+}
+
+.restaurant-panel__copy p {
+  max-width: 35rem;
+  margin: 0;
+  color: #4d2f16;
+  font-size: clamp(1.5rem, 0.74vw, 0.55rem);
+  line-height: 1.45;
+}
+
 @media (max-width: 1050px) {
   .navbar {
-    padding: 0.35rem 1rem;
-    gap: 1.25rem;
+    width: min(100%, 620px);
+    padding: 0 0.8rem;
+    gap: 1.6rem;
   }
 
   .navbar__links {
-    gap: clamp(1rem, 4vw, 4rem);
+    gap: clamp(1rem, 3vw, 2rem);
     padding-right: 0;
   }
 }
 
 @media (max-width: 700px) {
   .navbar {
+    width: 100%;
+    height: auto;
     flex-direction: column;
     padding: 0.8rem 1rem;
   }
@@ -191,6 +239,8 @@ nav {
   .navbar__links {
     font-size: 0.9rem;
     gap: 0.85rem 1.2rem;
+    flex-wrap: wrap;
+    white-space: normal;
   }
 
   .restaurant {

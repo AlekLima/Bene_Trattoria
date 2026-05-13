@@ -30,6 +30,20 @@ export function Restaurant() {
                     </Link>
                 ))}
             </div>
+
+            <div className="restaurant-panel__copy">
+                <h1>Tradição e sabor em cada fatia</h1>
+                <p>
+                    Há anos cultivamos em Fortaleza a arte da pizza feita à mão.
+                    Combinamos o rigor das técnicas clássicas italianas com o acolhimento
+                    cearense para criar uma experiência gastronômica única.
+                </p>
+                <p>
+                    Na Bene Trattoria, cada ingrediente é escolhido a dedo e cada pizza é
+                    assada com o propósito de unir pessoas em torno de uma mesa farta e
+                    saborosa.
+                </p>
+            </div>
         </section>
     )
 }

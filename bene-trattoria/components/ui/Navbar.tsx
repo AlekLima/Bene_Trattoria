@@ -1,21 +1,31 @@
+import Image from 'next/image'
 import Link from 'next/link'
- 
-export default function Home() {
-  return 
-}
+import Logo from '../../public/Logo.svg'
+
+const navItems = [
+  { label: 'Página Inicial', href: '/' },
+  { label: 'A Pizzaria', href: '/pizzaria' },
+  { label: 'Cardápio', href: '/menu' },
+  { label: 'Reservas', href: '/reservas' },
+  { label: 'Contato', href: '/contato' },
+]
 
 export function Navbar() {
   return (
-    <nav className="bg-pizza-green h-14 flex items-center justify-center gap-10 text-white italic bg-red-500 ">
-      <div className="w-10 h-10 rounded-full bg-pizza-orange flex items-center justify-center text-xs">
-        Logo
-      </div>
+    <nav className="nav" aria-label="Navegação principal">
+      <div className="navbar">
+        <Link  href="/" aria-label="Bene Trattoria">
+          <Image src={Logo} width={60} height={60} alt="" priority />
+        </Link>
 
-      <Link href="/dashboard">Pagina Inicial</Link>
-      <Link href="/dashboard">A Pizzaria</Link>
-      <Link href="/menu">Cardápio</Link>
-      <Link href="/dashboard">Reservas</Link>
-      <Link href="/dashboard">Contato</Link>
+        <div className="navbar__links">
+          {navItems.map((item) => (
+            <Link className='link' key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
     </nav>
   );
 }

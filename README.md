@@ -7,9 +7,8 @@ This project focuses on delivering a premium user experience with responsive des
 
 ## 📸 Preview
 
-> Add screenshots or GIFs inside the `/public` folder and update the paths below.
 
-    
+
 ![Desktop Preview](./bene-trattoria/public/PcPreview.png)
 ![Mobile Preview](./bene-trattoria/public/MobilePreview.png)
 

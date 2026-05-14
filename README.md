@@ -214,7 +214,7 @@ This project is licensed under the MIT License.
 Developed by [Alek Lima](https://github.com/AlekLima)
 
 - GitHub: [@AlekLima](https://github.com/AlekLima)
-- LinkedIn: Add your LinkedIn here
+- LinkedIn: https://www.linkedin.com/in/alekteles/
 
 ---
 

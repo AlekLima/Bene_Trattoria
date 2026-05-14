@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'pizza-green': '#2D4A22',
-        'pizza-beige': '#E8AF68',
+        'pizza-beige': '#F5D8B4',
         'pizza-red': '#B5361E',
         'pizza-red-dark': '#872817',
         'pizza-brown': '#4D2F16',

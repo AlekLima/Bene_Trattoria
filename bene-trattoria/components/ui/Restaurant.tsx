@@ -44,6 +44,12 @@ export function Restaurant() {
                     saborosa.
                 </p>
             </div>
+
+            <div className="restaurant-panel__highlights" aria-label="Destaques da casa">
+                <span>Massa de longa fermentação</span>
+                <span>Molho feito na casa</span>
+                <span>Forno sempre aceso</span>
+            </div>
         </section>
     )
 }

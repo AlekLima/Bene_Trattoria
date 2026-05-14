@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'pizza-green': '#2D4A22',   // Fundo da Navbar
-        'pizza-beige': '#F2C17D',   // Fundo da seção de texto
-        'pizza-orange': '#C04818',  // Cor dos botões/cards
+        'pizza-green': '#2D4A22',
+        'pizza-beige': '#E8AF68',
+        'pizza-red': '#B5361E',
+        'pizza-red-dark': '#872817',
+        'pizza-brown': '#4D2F16',
+        'pizza-brown-dark': '#2F1B0F',
       },
     },
   },

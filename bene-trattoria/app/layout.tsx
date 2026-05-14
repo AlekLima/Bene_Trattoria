@@ -1,10 +1,10 @@
 import './globals.css'
-import { Kaushan_Script } from 'next/font/google'
+import { Cormorant_Garamond } from 'next/font/google'
 
-const kaushanScript = Kaushan_Script({
+const cormorant = Cormorant_Garamond({
     subsets: ['latin'],
-    weight: ['400'],
-    variable: '--font-kaushan'
+    weight: ['400', '500', '600', '700'],
+    variable: '--font-display'
 })
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={kaushanScript.className}>
+    <html lang="pt-BR" className={cormorant.variable}>
       <body>
         {children}
       </body>
